@@ -325,7 +325,7 @@ body > div {
 .aspirations-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .aspirations-section h4 {
@@ -379,3 +379,40 @@ body > div {
 .principle-icon {
     color: var(--accent-color);
 }
+.collab-section {
+    padding: 1.5rem 0;
+  }
+  
+  .collab-intro,
+  .collab-closer {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #444;
+  }
+  
+  .collab-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .collab-card {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .collab-card h5 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .collab-card p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+/* career */
+  

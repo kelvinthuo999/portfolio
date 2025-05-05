@@ -86,180 +86,313 @@ document.addEventListener('DOMContentLoaded', () => {
             `
         },
         'Expertise': {
-            title: 'Expertise',
+            title: 'Core Competencies',
             content: `
-                <h4>Technical Skills</h4>
-                <ul>
-                    <li><strong>Languages:</strong> JavaScript, Python, Java</li>
-                    <li><strong>Frameworks:</strong> React, Node.js, Django, Spring Boot</li>
-                    <li><strong>Databases:</strong> PostgreSQL, MongoDB, MySQL</li>
-                    <li><strong>DevOps & Tools:</strong> Docker, Git, AWS, GitHub Actions</li>
-                    <li><strong>Testing:</strong> Jest, Mocha, Selenium</li>
+                <h4><i class="fa-solid fa-code"></i> Technical Skills</h4>
+                <ul class="expertise-list">
+                    <li><strong>Languages:</strong> Python, C, JavaScript</li>
+                    <li><strong>Frameworks & Tools:</strong> React, React Native, Flutter, Django, Node.js</li>
+                    <li><strong>Authentication:</strong> OAuth2, Social Logins, Role-based Access Control</li>
+                    <li><strong>Version Control & CI/CD:</strong> Git, GitHub, GitHub Actions</li>
+                    <li><strong>Deployment & Debugging:</strong> Docker, browser dev tools, runtime debugging (ALX experience)</li>
                 </ul>
-                <h4>Soft Skills</h4>
-                <ul>
-                    <li>Problem-solving mindset and logical reasoning</li>
-                    <li>Clear communicator, written and verbal</li>
-                    <li>Comfortable leading and mentoring junior engineers</li>
-                    <li>Fast learner and highly adaptable</li>
+
+                <h4><i class="fa-solid fa-terminal"></i> Projects & Problem Solving</h4>
+                <p>
+                    I bring a problem-solving mindset grounded in strong engineering fundamentals. Whether it's optimizing performance, designing scalable architectures, or debugging edge-case issues under pressure, I focus on delivering practical, high-impact solutions. My experience across freelance and open-source environments has shaped a sharp, adaptable approach to real-world software challenges.
+                </p>
+
+
+                <h4><i class="fa-solid fa-comments"></i> Communication & Soft Skills</h4>
+                <ul class="expertise-list">
+                    <li><strong>Effective Technical Communication:</strong> Capable of translating complex systems into accessible concepts across teams.</li>
+                    <li><strong>Detail-Oriented Execution:</strong> Strong eye for edge cases, spec adherence, and test coverage.</li>
+                    <li><strong>Collaborative Engineering:</strong> Proven ability to contribute in asynchronous, distributed, and cross-functional teams.</li>
                 </ul>
-            `
+
+                <h4><i class="fa-solid fa-seedling"></i> Currently Improving</h4>
+                <ul class="expertise-list">
+                <li>Diving deeper into backend architecture and API design patterns</li>
+                <li>Strengthening test-driven development and debugging workflows</li>
+                <li>Exploring system design fundamentals and scalable application patterns</li>
+                <li>Building this portfolio in vanilla HTML, CSS, and JavaScript to reinforce core principles</li>
+                </ul> `
         },
         'Workflow': {
-            title: 'Workflow',
+            title: 'Process & Collaboration',
             content: `
-                <h4>How I Work 🛠️</h4>
+                <h4>How I Build & Deliver 🛠️</h4>
                 <ul>
-                    <li><strong>User-Centric Development:</strong> I prioritize understanding user needs before writing a line of code.</li>
-                    <li><strong>Agile Methodology:</strong> Experienced with both Scrum and Kanban for flexible, iterative development.</li>
-                    <li><strong>Version Control:</strong> Git is second nature — branching, PR reviews, atomic commits.</li>
-                    <li><strong>Testing Culture:</strong> I integrate testing from day one — unit, integration, and end-to-end.</li>
-                    <li><strong>CI/CD Pipelines:</strong> I automate builds, tests, and deployments to ensure rapid and safe releases.</li>
-                    <li><strong>Documentation:</strong> I write clear, useful docs that aid both onboarding and long-term maintainability.</li>
+                <li><strong>Impact-Driven Development:</strong> I focus on solving the right problems and building scalable, user-centered systems that create tangible value.</li>
+                <li><strong>Visual Planning:</strong> I map out user flows and data architecture using wireframes and tools like Figma or draw.io before writing a single line of code.</li>
+                <li><strong>Agile Execution:</strong> I thrive in Scrum, Kanban, or hybrid setups — integrating feedback early and often to adapt quickly and deliver iteratively.</li>
+                <li><strong>Collaborative Tooling:</strong> My workflow includes GitHub for version control and PR reviews, Postman for API testing, Notion and Slack for team sync, and Loom for async updates.</li>
+                <li><strong>Quality-First Approach:</strong> I practice test-driven development using Jest, Mocha, or Cypress to ensure confidence and stability throughout the stack.</li>
+                <li><strong>CI/CD & Delivery:</strong> I deploy through automated pipelines (GitHub Actions, Vercel, Netlify) for seamless releases and reduced regressions.</li>
+                <li><strong>Maintainable Systems:</strong> I write clean, well-documented code that supports onboarding, scaling, and future handoff with ease.</li>
                 </ul>
-                <p>I believe software is not just about code — it's about clarity, collaboration, and delivering value continuously.</p>
+
+                <h4>My Development Cycle 🔄</h4>
+                <ol class="expertise-list">
+                <li><strong>Understand:</strong> Clarify the problem, define success metrics, and align on expectations.</li>
+                <li><strong>Design:</strong> Create wireframes and flowcharts to surface edge cases and user journeys.</li>
+                <li><strong>Build:</strong> Develop modular, testable code — backend, frontend, or full stack as needed.</li>
+                <li><strong>Test:</strong> Validate core functionality, catch regressions, and review logic across edge cases.</li>
+                <li><strong>Deploy:</strong> Automate deployment and monitor releases with clarity and traceability.</li>
+                <li><strong>Iterate:</strong> Use feedback loops and usage data to continuously refine and improve.</li>
+                </ol>
+
+                <h4>Tooling Philosophy 🧰</h4>
+                <p>
+                I choose tools based on context — not comfort. Whether it's GitHub, VS Code, Figma, Postman, or something new, I prioritize simplicity, adaptability, and team alignment to get the job done well.
+                </p>
+
+                <p>I view software as a team sport — where clean execution, continuous learning, and user-centered thinking lead to products that truly make an impact.</p>
             `
-        },
+            },
         'Collaborations': {
-            title: 'Collaborations',
+            title: 'Cross-Team Impact',
             content: `
-                <h4>Working Together 🤝</h4>
-                <p>I thrive in collaborative environments where team synergy drives great results.</p>
-                <ul>
-                    <li><strong>Open Source:</strong> Contributed to [Project Name], improving [feature/performance/UX].</li>
-                    <li><strong>Hackathons:</strong> Participated in [Event Name], where our team built a [brief description of the app] in under 48 hours.</li>
-                    <li><strong>Team Projects:</strong> Developed a [project type] in a cross-functional team, where I handled [your role or contribution].</li>
-                    <li><strong>Mentorship & Reviews:</strong> Regularly paired with junior devs for pair programming, code reviews, and technical guidance.</li>
-                </ul>
-                <p>I believe great software comes from diverse ideas, mutual respect, and open collaboration.</p>
+                <section class="collab-section">
+                <h4><i class="fa-solid fa-people-group"></i> Working Together to Build Better</h4>
+                <p class="collab-intro">
+                    I bring a team-first mindset to every project — balancing independent execution with active collaboration.
+                    Whether it's shipping features, mentoring peers, or aligning cross-functionally, I believe the best work comes 
+                    from diverse perspectives and shared ownership.
+                </p>
+
+                <div class="collab-cards">
+                    <div class="collab-card">
+                    <h5><i class="fa-brands fa-github"></i> Open Source Contributions</h5>
+                    <p>Improved code quality and performance in community projects by fixing bugs, refining UX, and documenting APIs.</p>
+                    </div>
+
+                    <div class="collab-card">
+                    <h5><i class="fa-solid fa-laptop-code"></i> Hackathon Teams</h5>
+                    <p>Delivered functional prototypes in 48-hour sprints — blending design, development, and agile problem-solving.</p>
+                    </div>
+
+                    <div class="collab-card">
+                    <h5><i class="fa-solid fa-handshake"></i> Freelance Collaborations</h5>
+                    <p>Worked closely with clients and designers to translate business needs into user-centered applications.</p>
+                    </div>
+
+                    <div class="collab-card">
+                    <h5><i class="fa-solid fa-user-graduate"></i> Peer Mentorship</h5>
+                    <p>Reviewed pull requests, co-debugged blockers, and provided guidance to junior developers and peers.</p>
+                    </div>
+                </div>
+
+                <p class="collab-closer">
+                    My goal is always the same: build useful things, elevate the people around me, and move projects forward — together.
+                </p>
+                </section>
             `
-        },
+            },
         'Career': {
-            title: 'Career',
+            title: 'Professional Journey',
             content: `
-                <h4>Professional Journey 🧭</h4>
-                <div>
-                    <strong>Software Engineer</strong><br>
-                    <em>Company Name | Location | 2023 – Present</em>
-                    <ul>
-                        <li>Designed and deployed scalable web applications using React, Node.js, and PostgreSQL.</li>
-                        <li>Led a 4-person team in delivering an internal tool used across 3 departments.</li>
-                        <li>Improved system performance by 30% through architectural refactoring and query optimization.</li>
-                    </ul>
+                <h4>Experience & Impact 🧭</h4>
+                <p>
+                My journey as a developer has been shaped through a blend of contract work, freelance projects, and a hands-on internship experience. Across every opportunity, I've focused on delivering real-world impact—whether building mobile-first applications, establishing backend systems, or collaborating closely with diverse teams to bring ideas to life.
+                </p>
+
+                <div class="career-role">
+                <strong>Software Developer (Contract)</strong><br>
+                <em>Upwork / Remote | 2024 – Present</em>
+                <ul>
+                    <li><strong>Clengo App:</strong> Co-developed a cross-platform task scheduling app using React Native.</li>
+                    <li>Led frontend architecture, implemented reusable components, and enhanced delivery velocity.</li>
+                    <li>Contributed to backend design with Node.js and Express, focusing on scalable APIs and secure auth flows.</li>
+                </ul>
                 </div>
-                <div>
-                    <strong>Junior Developer</strong><br>
-                    <em>Company Name | Location | 2021 – 2023</em>
-                    <ul>
-                        <li>Contributed to front-end development of customer dashboard used by 5,000+ users.</li>
-                        <li>Worked closely with designers to improve accessibility and responsiveness.</li>
-                        <li>Wrote unit and integration tests that reduced bugs by 25% in production.</li>
-                    </ul>
+
+                <div class="career-role">
+                <strong>Android Developer</strong><br>
+                <em>Freelance Project | 2023 – Present</em>
+                <ul>
+                    <li><strong>Tunda App:</strong> Built a mobile platform connecting fruit vendors with freelance delivery riders.</li>
+                    <li>Integrated vendor dashboards, order management, geolocation, and Firebase for backend analytics.</li>
+                    <li>Launched on Android with continued maintenance and usability improvements based on user feedback.</li>
+                </ul>
                 </div>
-                <div>
-                    <strong>Intern Developer</strong><br>
-                    <em>Company Name | Location | 2020</em>
-                    <ul>
-                        <li>Built internal scripts to automate data entry, reducing manual tasks by 40%.</li>
-                        <li>Gained hands-on experience with Git workflows, Jira, and agile practices.</li>
-                    </ul>
+
+                <div class="career-role">
+                <strong>Software Engineering Intern</strong><br>
+                <em>Climate Wavers | Remote | Jun 2024 – Dec 2024</em>
+                <ul>
+                    <li>Established the company’s static site and supported backend development using Django.</li>
+                    <li>Built internal tools for logistics use cases and contributed to early product planning discussions.</li>
+                    <li>Practiced GitHub-based workflows and collaborated across async, cross-functional teams.</li>
+                </ul>
                 </div>
             `
-        },
+            },
         'Education': {
             title: 'Education',
             content: `
-                <h4>Academic Background 🎓</h4>
-                <p><strong>Bachelor of Science in Computer Science</strong><br>
-                University Name | Graduation Year<br>
-                Relevant Courses: Algorithms, Data Structures, Systems Design, AI.</p>
+                <h4>Learning & Growth 🎓</h4>
 
-                <h4>Certifications</h4>
+                <div class="education-entry">
+                <strong>Data Structures & Algorithms Program</strong><br>
+                <em>Africa to Silicon Valley (A2SV) | 2025 – Present</em>
                 <ul>
-                    <li>Google Cloud Associate Engineer — 2023</li>
-                    <li>Meta Front-End Developer Certificate (Coursera) — 2022</li>
-                    <li>Scrum Master Certification — 2021</li>
+                    <li>Focused training in problem solving, algorithmic thinking, and communication through high-impact DSA problems.</li>
+                    <li>Hands-on experience with competitive programming patterns and deep dives into time-space tradeoffs.</li>
                 </ul>
+                </div>
 
-                <h4>Other Training</h4>
+                <div class="education-entry">
+                <strong>Software Engineering Program</strong><br>
+                <em>ALX | 2023 – 2024</em>
                 <ul>
-                    <li>Full-Stack Web Development Bootcamp – freeCodeCamp / Udemy</li>
+                    <li>12-month intensive, project-led program covering systems programming, full-stack web development, and infrastructure tooling.</li>
+                    <li>Built and deployed web apps from scratch using HTML, CSS, JavaScript, Python, and C; implemented load balancers and web servers.</li>
+                    <li>Final project: Created a custom Shell in C with process handling, tokenization, and basic job control.</li>
                 </ul>
+                </div>
+
+                <div class="education-entry">
+                <strong>Technical Transition & Self-Study</strong><br>
+                <em>2019 – 2023 | Independent</em>
+                <ul>
+                    <li>Actively transitioned into software engineering by self-studying programming fundamentals and applying engineering principles from my instrumentation background.</li>
+                    <li>Built automation scripts and explored Python and Bash tools while preparing for formal technical training.</li>
+                    <li>This period laid the foundation for my structured education and hands-on engineering practice.</li>
+                </ul>
+                </div>
+
+                <div class="education-entry">
+                <strong>BSc. Control & Instrumentation</strong><br>
+                <em>Jomo Kenyatta University of Agriculture and Technology | 2015 – 2019</em>
+                <ul>
+                    <li>Learned systems design, automation, and control theory — forming a strong analytical foundation for engineering problem-solving.</li>
+                    <li>Capstone project involved building a prototype for real-time temperature monitoring and regulation.</li>
+                </ul>
+                </div>
             `
-        },
-        'Resume': {
+            },
+        Resume: {
             title: 'Resume',
             content: `
-                <p>You can view or download my full resume below:</p>
-                <a href="resume.pdf" target="_blank" class="text-accent-color font-medium">📄 Download Resume</a>
-                <p>If the preview doesn't load, use the download link above.</p>
-                <iframe src="resume.pdf" width="100%" height="500px" style="border:1px solid #ccc;"></iframe>
+                <h4>Kelvin Thuo — Resume Snapshot 📄</h4>
+
+                <p><strong>Software Engineer</strong> — Proven experience in building and deploying full-stack applications, mobile apps, and custom tools across freelance and internship roles. Over 2800+ hours of hands-on development.</p>
+
+                <h5>Key Experience:</h5>
+                <ul>
+                <li><strong>Climate Wavers (Intern):</strong> Django backend, team leadership, chatbot dev, and social auth integration.</li>
+                <li><strong>Freelance (Upwork/Fiverr):</strong> Built video tools (MoviePy), web charts (JS + ECharts), and contributed to mobile/web platforms.</li>
+                <li><strong>Projects:</strong> 
+                    <ul>
+                    <li><strong>TundaApp:</strong> Android app for informal vendors using SQLite + Flutter.</li>
+                    <li><strong>Shell:</strong> Built from scratch in C to learn memory and process execution.</li>
+                    <li><strong>Airbnb Clone:</strong> Full-stack with Flask, MySQL, Redis, and front-end stack.</li>
+                    </ul>
+                </li>
+                </ul>
+
+                <h5>Technical Stack:</h5>
+                <ul>
+                <li><strong>Languages:</strong> C, Python, JavaScript, Dart</li>
+                <li><strong>Backend:</strong> Django, Flask, Node.js</li>
+                <li><strong>Frontend:</strong> HTML, CSS, Tailwind, Flutter</li>
+                <li><strong>Databases:</strong> MySQL, PostgreSQL, SQLite, MongoDB, Redis</li>
+                </ul>
+
+                <h5>Education:</h5>
+                <ul>
+                <li><strong>ALX Africa:</strong> Software Engineering Certificate (2023–2024)</li>
+                <li><strong>JKUAT:</strong> BSc. Control & Instrumentation (2015–2019)</li>
+                </ul>
+
+                <p><a href="https://docs.google.com/document/d/your-doc-id-here" target="_blank">📄 View Full Resume on Google Docs</a></p>
             `
-        },
+            },
         'Highlights': {
-            title: 'Highlights',
+            title: 'Impactful Builds',
             content: `
-                <p>Here are a few standout projects that reflect both my technical capabilities and design thinking.</p>
+                <p>These are a few real-world projects where I translated ideas into usable, impactful products — from mobile-first apps to scalable backend systems.</p>
 
-                <h4>DevTrack – Developer Productivity Dashboard</h4>
+                <h4>Clengo – Cleaning Service Coordination Platform</h4>
                 <ul>
-                    <li><strong>Role:</strong> Full-Stack Developer</li>
-                    <li><strong>Stack:</strong> React, Node.js, MongoDB, Chart.js</li>
-                    <li>Designed and implemented a dashboard to visualize developer performance using GitHub API integrations.</li>
-                    <li>Helped teams reduce cycle time by 20% through visibility and insights.</li>
-                    <li><a href="#">View Project</a></li>
+                <li><strong>Role:</strong> Mobile Engineer & Backend Collaborator</li>
+                <li><strong>Stack:</strong> React Native, Node.js, MongoDB</li>
+                <li>Co-developed mobile apps for both clients and cleaners, supporting scheduling, job selection, and notifications.</li>
+                <li>Implemented modular UI components and contributed to scalable backend architecture with secure authentication flows.</li>
+                <li><a href="#">View Project</a></li>
                 </ul>
 
-                <h4>EcoCart – Sustainable E-Commerce</h4>
+                <h4>Tunda – Local Produce Delivery Network</h4>
                 <ul>
-                    <li><strong>Role:</strong> Backend Engineer</li>
-                    <li><strong>Stack:</strong> Django, PostgreSQL, Stripe API</li>
-                    <li>Built an online store with carbon-tracking checkout and vendor dashboards.</li>
-                    <li>Scaled to 500+ transactions/day after launch.</li>
-                    <li><a href="#">View Project</a></li>
+                <li><strong>Role:</strong> Full-Stack Developer</li>
+                <li><strong>Stack:</strong> Flutter, Node.js, MySQL</li>
+                <li>Built vendor-facing features and delivery-side flow to coordinate fruit order deliveries via freelance riders.</li>
+                <li>Integrated Firebase for push notifications and analytics; implemented clean backend architecture and order tracking.</li>
+                <li><a href="#">View Project</a></li>
+                </ul>
+
+                <h4>Swerise – Multi-Branch Retail Management App</h4>
+                <ul>
+                <li><strong>Role:</strong> Mobile Developer</li>
+                <li><strong>Stack:</strong> React Native, SQLite</li>
+                <li>Developed an offline-first Android app for daily sales logging across four petroleum retail shops.</li>
+                <li>Engineered local-first data sync strategies to support low-connectivity environments while ensuring data integrity.</li>
+                <li><a href="#">View Project</a></li>
                 </ul>
             `
-        },
+            },
         'Ongoing': {
-            title: 'Ongoing',
+            title: 'Active Builds',
             content: `
-                 <p>I’m actively working on a number of exciting, experimental, and passion-driven builds.</p>
+                <p>I’m actively building tools that solve real-world logistical and operational challenges. These projects reflect both my technical growth and long-term vision.</p>
 
-                <h4>MentorMatch – Career Mentorship Platform</h4>
+                <h4>Clengo – Admin Dashboard & Backend Overhaul</h4>
                 <ul>
-                    <li><strong>Status:</strong> MVP in progress</li>
-                    <li><strong>Stack:</strong> Next.js, Firebase, Tailwind</li>
-                    <li>Connects early-career developers with industry mentors. Features scheduling, chat, and profile verification.</li>
+                <li><strong>Status:</strong> In Development</li>
+                <li><strong>Stack:</strong> React (Admin UI), Node.js, Express, MongoDB</li>
+                <li>Designing and implementing an admin interface for job management and cleaner performance analytics.</li>
+                <li>Refactoring backend architecture to improve maintainability, performance, and security.</li>
                 </ul>
 
-                <h4>AI Code Helper – Smart Dev Assistant</h4>
+                <h4>TripOptima – Integrated Travel & Transport Platform</h4>
                 <ul>
-                    <li><strong>Status:</strong> Prototype</li>
-                    <li><strong>Stack:</strong> React, FastAPI, OpenAI API</li>
-                    <li>Aims to streamline code snippets, documentation, and debugging within VS Code environment.</li>
+                <li><strong>Status:</strong> Design Phase</li>
+                <li><strong>Stack:</strong> To Be Determined</li>
+                <li>Planning a unified platform for car hire, hotel transfers, tours, and chauffeur services.</li>
+                <li>Current focus on user experience flows, service modeling, and multi-role access design.</li>
                 </ul>
             `
-        },
+            },
         'Launches': {
-            title: 'Live Projects & Launches',
+            title: 'Launches',
             content: `
-                <p>These are projects that have been deployed and are live in production or actively used.</p>
+                <p>These are tools, applications, and scripts I’ve brought to life — functional, shipped, and used in real-world scenarios.</p>
 
-                <h4>CampusMate – Student Life Management Tool</h4>
+                <h4>DodgeBall Data Scraper</h4>
                 <ul>
-                    <li><strong>Live:</strong> <a href="#">campusmate.io</a></li>
-                    <li><strong>Stack:</strong> MERN (MongoDB, Express, React, Node)</li>
-                    <li>Helps students track assignments, grades, and activities in one place. Launched in 3 campuses.</li>
+                <li><strong>Role:</strong> Python Developer</li>
+                <li><strong>Tech:</strong> Python, BeautifulSoup, Requests</li>
+                <li>Built a web scraping utility to collect match data from a dodgeball tournament site for post-game analysis and reporting.</li>
+                <li>Automated daily data pulls and structured output for downstream analytics teams.</li>
                 </ul>
 
-                <h4>Eventify – Virtual Event Hosting Platform</h4>
+                <h4>Tunda (Launch)</h4>
                 <ul>
-                    <li><strong>Live:</strong> <a href="#">eventify.live</a></li>
-                    <li><strong>Stack:</strong> Laravel, Vue.js, MySQL</li>
-                    <li>Used by 10+ organizations to run webinars, Q&A sessions, and live broadcasts.</li>
+                <li><strong>Role:</strong> Product Creator</li>
+                <li><strong>Tech:</strong> Flutter, Node.js, MySQL</li>
+                <li>Released an Android app connecting fruit vendors with freelance riders, with live usage in local markets.</li>
+                <li>Integrated Firebase for analytics and notifications post-launch.</li>
+                </ul>
+
+                <h4>Swerise (Launch)</h4>
+                <ul>
+                <li><strong>Role:</strong> Developer</li>
+                <li><strong>Tech:</strong> React Native</li>
+                <li>Shipped a retail management tool for petroleum shop chains with offline-first features and cross-location sync.</li>
                 </ul>
             `
-        }
+            }
     };
 
     const SMALL_CONTENT_KEYS = ['Bio', 'Values', 'Goals', 'Vision'];
