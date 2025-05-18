@@ -20,6 +20,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 body {
@@ -30,14 +31,14 @@ body {
 }
 
 body > div {
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 /* header section */ 
 .profile_header {
-    background-color: var(--white);
+    background-color: linear-gradient(to bottom right, white, #f1f0fb);
     display: flex;
     align-items: center;
     padding: 1.5rem 2.5rem;
@@ -121,6 +122,7 @@ body > div {
     gap: 1rem;
     margin: 0;
     padding: 0 1rem;
+    overflow: hidden;
 }
 
 /* Content display area */
@@ -174,6 +176,7 @@ body > div {
 }
 
 .file_content.large-content {
+    flex: 1;
     padding: 2rem;
     height: 100%;
     width: 100%;
@@ -416,3 +419,41 @@ body > div {
   }
 /* career */
   
+
+.workflow-timeline {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 1rem 0;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.workflow-step {
+    flex: 0 0 auto;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    width: 220px;
+    text-align: center;
+    min-height: 180px;
+    transition: transform 0.3s ease;
+}
+
+.workflow-step:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.workflow-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.workflow-arrow {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    flex: 0 0 auto;
+}

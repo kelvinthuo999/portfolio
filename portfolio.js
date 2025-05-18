@@ -142,6 +142,46 @@ document.addEventListener('DOMContentLoaded', () => {
                 <li><strong>Iterate:</strong> Use feedback loops and usage data to continuously refine and improve.</li>
                 </ol>
 
+                <h4>My Development Cycle 🔄</h4>
+                    <div class="workflow-timeline">
+                        <div class="workflow-step">
+                            <div class="workflow-icon">🧠</div>
+                            <h5>Understand</h5>
+                            <p>Clarify the problem, define success metrics, and align on expectations.</p>
+                        </div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">
+                            <div class="workflow-icon">📐</div>
+                            <h5>Design</h5>
+                            <p>Create wireframes and flowcharts to surface edge cases and user journeys.</p>
+                        </div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">
+                            <div class="workflow-icon">💻</div>
+                            <h5>Build</h5>
+                            <p>Develop modular, testable code — backend, frontend, or full stack as needed.</p>
+                        </div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">
+                            <div class="workflow-icon">🧪</div>
+                            <h5>Test</h5>
+                            <p>Validate functionality, catch regressions, and review logic across edge cases.</p>
+                        </div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">
+                            <div class="workflow-icon">🚀</div>
+                            <h5>Deploy</h5>
+                            <p>Automate deployment and monitor releases with clarity and traceability.</p>
+                        </div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">
+                            <div class="workflow-icon">🔁</div>
+                            <h5>Iterate</h5>
+                            <p>Use feedback loops and usage data to continuously refine and improve.</p>
+                        </div>
+                    </div>
+
+
                 <h4>Tooling Philosophy 🧰</h4>
                 <p>
                 I choose tools based on context — not comfort. Whether it's GitHub, VS Code, Figma, Postman, or something new, I prioritize simplicity, adaptability, and team alignment to get the job done well.
@@ -393,7 +433,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             `
             }
-    };
+    };    
 
     const SMALL_CONTENT_KEYS = ['Bio', 'Values', 'Goals', 'Vision'];
 
