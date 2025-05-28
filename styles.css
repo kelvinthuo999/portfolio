@@ -429,6 +429,20 @@ body > div {
     align-items: center;
     margin-bottom: 2rem;
 }
+.workflow-timeline::-webkit-scrollbar {
+  height: 6px;
+}
+
+.workflow-timeline::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.workflow-timeline::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
 
 .workflow-step {
     flex: 0 0 auto;

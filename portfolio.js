@@ -133,16 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
 
                 <h4>My Development Cycle 🔄</h4>
-                <ol class="expertise-list">
-                <li><strong>Understand:</strong> Clarify the problem, define success metrics, and align on expectations.</li>
-                <li><strong>Design:</strong> Create wireframes and flowcharts to surface edge cases and user journeys.</li>
-                <li><strong>Build:</strong> Develop modular, testable code — backend, frontend, or full stack as needed.</li>
-                <li><strong>Test:</strong> Validate core functionality, catch regressions, and review logic across edge cases.</li>
-                <li><strong>Deploy:</strong> Automate deployment and monitor releases with clarity and traceability.</li>
-                <li><strong>Iterate:</strong> Use feedback loops and usage data to continuously refine and improve.</li>
-                </ol>
-
-                <h4>My Development Cycle 🔄</h4>
+                <div class="workflow-timeline-wrapper">
                     <div class="workflow-timeline">
                         <div class="workflow-step">
                             <div class="workflow-icon">🧠</div>
@@ -180,6 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <p>Use feedback loops and usage data to continuously refine and improve.</p>
                         </div>
                     </div>
+                </div>
 
 
                 <h4>Tooling Philosophy 🧰</h4>
