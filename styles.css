@@ -55,6 +55,7 @@ body > div {
     width: 140px;
     height: 140px;
     object-fit: cover;
+    object-position: top;
     box-shadow: var(--shadow-md);
     transition: var(--transition);
     display: block;
