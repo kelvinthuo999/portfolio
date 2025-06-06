@@ -365,13 +365,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
 
                 <h4>Swerise – Multi-Branch Retail Management App</h4>
-                <ul>
+                <ul>   
                 <li><strong>Role:</strong> Mobile Developer</li>
-                <li><strong>Stack:</strong> React Native, SQLite</li>
-                <li>Developed an offline-first Android app for daily sales logging across four petroleum retail shops.</li>
-                <li>Engineered local-first data sync strategies to support low-connectivity environments while ensuring data integrity.</li>
-                <li><a href="#">View Project</a></li>
-                </ul>
+                <li><strong>Stack:</strong> React Native, SQLite, Firebase</li> 
+                <li><strong>Situation:</strong> The business owner was manually traveling to five petroleum retail shops 
+                    to reconcile physical sales records with cash, Mpesa, and debt — a time-consuming and costly task.</li> 
+                <li><strong>Task:</strong> Design and develop a system that digitizes sales logging and reduces the need for frequent shop visits, 
+                    especially in areas with limited internet connectivity.</li> 
+                <li><strong>Action:</strong> 
+                    <ul> 
+                    <li>Developed two separate Android apps — one for employees, one for the owner — using an offline-first architecture.</li> 
+                    <li>Employee app: Enabled daily sales logging with local storage, syncing data to the cloud once internet became available.</li> 
+                    <li>Owner app: Built a live dashboard with cross-branch visibility and offline support for onsite operations.</li> 
+                    <li>Implemented secure data sync strategies to ensure consistency and prevent data loss in low-connectivity environments.</li> 
+                    </ul> 
+                <li><strong>Result:</strong> 
+                    <ul> 
+                        <li>Reduced management costs by over <strong>70%</strong> — replacing high weekly travel expenses with low mobile data usage and fewer physical shop visits.</li> 
+                        <li>Saved approximately <strong>10+ hours/week</strong> for the owner by eliminating manual reconciliation and travel, enabling focus on strategic business decisions.</li> 
+                        <li>Provided real-time operational visibility and boosted decision-making confidence through synced cross-branch sales dashboards.</li> 
+                        <li>Enabled successful launch of a <strong>6th branch</strong> within 3 months, thanks to regained time, clarity, and system scalability.</li> 
+                    </ul> 
+                </li>
+                </li> <li><a href="https://www.upwork.com/freelancers/~01f8a36662a7a28681?p=1930658933494726656">View Project</a></li> </ul>
             `
             },
         'Ongoing': {
