@@ -1,10 +1,84 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize WakaTime service
+    let wakaTimeService;
+    let wakaTimeData = null;
+    let wakaTimeLoading = false;
+    
+    // Initialize WakaTime service if available
+    if (typeof WakaTimeService !== 'undefined' && typeof CONFIG !== 'undefined') {
+        try {
+            wakaTimeService = new WakaTimeService(CONFIG, typeof ENV !== 'undefined' ? ENV : null);
+            console.log('WakaTime service initialized');
+        } catch (error) {
+            console.warn('Failed to initialize WakaTime service:', error);
+        }
+    }
+    
     // Store DOM elements
     const folders = document.querySelectorAll('.folder');
     const files = document.querySelectorAll('.file');
     const contentPlaceholder = document.querySelector('.content_placeholder');
     const fileContent = document.querySelector('.file_content');
     const contentDisplay = document.querySelector('.content_display');
+    
+    // Function to fetch WakaTime data
+    async function fetchWakaTimeData() {
+        if (wakaTimeLoading || !wakaTimeService) {
+            return wakaTimeData;
+        }
+        
+        wakaTimeLoading = true;
+        try {
+            console.log('Fetching WakaTime data...');
+            const data = await wakaTimeService.fetchStats();
+            wakaTimeData = data;
+            console.log('WakaTime data loaded:', data);
+            return data;
+        } catch (error) {
+            console.warn('Error fetching WakaTime data:', error);
+            return wakaTimeService ? wakaTimeService._getFallbackData() : null;
+        } finally {
+            wakaTimeLoading = false;
+        }
+    }
+    
+    // Function to get formatted time display
+    function getFormattedTimeDisplay(data) {
+        if (!data) {
+            return '2,800+ hours'; // fallback
+        }
+        
+        if (data.is_fallback) {
+            return data.display_text;
+        }
+        
+        return data.display_text || data.formatted_time || '2,800+ hours';
+    }
+    
+    // Function to update content with WakaTime data
+    function updateContentWithWakaTimeData(contentKey, originalContent) {
+        if (!wakaTimeData || !originalContent) {
+            return originalContent;
+        }
+        
+        const timeDisplay = getFormattedTimeDisplay(wakaTimeData);
+        
+        // Replace hard-coded values with dynamic WakaTime data
+        let updatedContent = originalContent;
+        
+        // Replace various patterns of hard-coded time
+        updatedContent = updatedContent.replace(/2,?600\+? hours?/gi, timeDisplay);
+        updatedContent = updatedContent.replace(/2,?800\+? hours?/gi, timeDisplay);
+        updatedContent = updatedContent.replace(/over\s+\d{1,2},\d{3}\+?\s+hours?/gi, `over ${timeDisplay}`);
+        
+        // Add a subtle indicator if using live data
+        if (!wakaTimeData.is_fallback && contentKey === 'Overview') {
+            const lastUpdated = wakaTimeData.last_updated ? new Date(wakaTimeData.last_updated).toLocaleDateString() : 'recently';
+            updatedContent += `\n\n<p class="wakatime-indicator"><small><em>⏱️ Coding time automatically updated from WakaTime (last updated: ${lastUpdated})</em></small></p>`;
+        }
+        
+        return updatedContent;
+    }
 
     // Content mapping 
     const contentMap = {
@@ -463,7 +537,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     files.forEach(file => {
-        file.addEventListener('click', () => {
+        file.addEventListener('click', async () => {
             files.forEach(f => f.classList.remove('active'));
             file.classList.add('active');
 
@@ -476,7 +550,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 contentPlaceholder.style.display = 'none';
                 fileContent.style.opacity = '0';
 
-                setTimeout(() => {
+                setTimeout(async () => {
                     fileContent.style.display = 'block';
                     fileContent.classList.remove('small-content', 'large-content');
 
@@ -486,9 +560,28 @@ document.addEventListener('DOMContentLoaded', () => {
                         fileContent.classList.add('large-content');
                     }
 
+                    // Show loading state for content that uses WakaTime data
+                    if (contentKey === 'Overview' || contentKey === 'Resume') {
+                        fileContent.innerHTML = `
+                            ${isTitleRedundant ? '' : `<h2>${content.title}</h2>`}
+                            <div class="wakatime-loading">
+                                <p>📊 Loading coding statistics...</p>
+                            </div>
+                            ${content.content}
+                        `;
+                        
+                        // Fetch WakaTime data if not already loaded
+                        if (!wakaTimeData) {
+                            await fetchWakaTimeData();
+                        }
+                    }
+                    
+                    // Update content with WakaTime data
+                    const updatedContent = updateContentWithWakaTimeData(contentKey, content.content);
+                    
                     fileContent.innerHTML = `
                         ${isTitleRedundant ? '' : `<h2>${content.title}</h2>`}
-                        ${content.content}
+                        ${updatedContent}
                     `;
 
                     setTimeout(() => {
@@ -503,6 +596,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const contents = folder.querySelector('.folder_contents');
         contents.style.maxHeight = '0px';
     });
+    
+    // Initialize WakaTime data in background
+    if (wakaTimeService) {
+        fetchWakaTimeData().then(data => {
+            if (data) {
+                console.log('WakaTime data preloaded:', data.display_text);
+            }
+        }).catch(error => {
+            console.warn('Failed to preload WakaTime data:', error);
+        });
+    }
 
     const style = document.createElement('style');
     style.textContent = `
@@ -522,6 +626,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
         .file_content {
             transition: opacity 0.3s ease-in-out;
+        }
+        
+        .wakatime-loading {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-style: italic;
+            color: #666;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        
+        .wakatime-indicator {
+            border-left: 3px solid #4CAF50;
+            padding-left: 10px;
+            margin-top: 15px;
+            background-color: rgba(76, 175, 80, 0.1);
+            border-radius: 3px;
+            padding: 8px 12px;
+        }
+        
+        .wakatime-indicator small {
+            color: #2E7D32;
+            font-size: 0.85em;
         }
     `;
     document.head.appendChild(style);
