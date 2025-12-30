@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h4>How I Build & Deliver 🛠️</h4>
                 <ul>
                 <li><strong>Impact-Driven Development:</strong> I focus on solving the right problems and building scalable, user-centered systems that create tangible value.</li>
-                <li><strong>Visual Planning:</strong> I map out user flows and data architecture using wireframes and tools like Figma or draw.io before writing a single line of code.</li>
+                <li><strong>Visual Planning:</strong> I map out user flows and data architecture using wireframes and tools like Figma or draw.io before developing the code.</li>
                 <li><strong>Agile Execution:</strong> I thrive in Scrum, Kanban, or hybrid setups — integrating feedback early and often to adapt quickly and deliver iteratively.</li>
                 <li><strong>Collaborative Tooling:</strong> My workflow includes GitHub for version control and PR reviews, Postman for API testing, Notion and Slack for team sync, and Loom for async updates.</li>
                 <li><strong>Quality-First Approach:</strong> I practice test-driven development using Jest, Mocha, or Cypress to ensure confidence and stability throughout the stack.</li>
